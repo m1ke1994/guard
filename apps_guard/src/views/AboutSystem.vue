@@ -44,7 +44,7 @@
  }
  
   hr{
-    border: 2px solid #2A588C;
+    border: 1px solid #2A588C;
   }
   </style>
   

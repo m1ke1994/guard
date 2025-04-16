@@ -1,72 +1,50 @@
-<script>
-
-
-</script>
+<script setup>
+ 
+  </script>
 <template>
-  <div class="w-full flex flex-col">
-    <div class="about-system-header">
-      <h1 class="p-4 text-center text-2xl font-bold md:text-lg sm:text-base max-lg:text-lg max-lg:p-2">Настройка синхронизации времени</h1>
-      <hr class="mb-16 md:mb-12 sm:mb-8">
-    </div>
-
-    <div class="about-system-title flex flex-col mx-auto">
-      <hr class="mb-2 hr_one">
-
-      <!-- Синхронизация -->
-      <div class="flex items-center border-b border-black border-opacity-20 py-4 max-lg:py-2">
-        <p class="text-2xl w-full sm:w-1/2 md:text-xl sm:text-lg max-lg:text-xs">Синхронизация</p>
-        <div class="w-full sm:w-1/2 flex justify-end sm:justify-start">
-          <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" class="sr-only peer">
-            <div class="w-11 h-6 bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-500 rounded-full peer peer-checked:bg-blue-600 transition-colors duration-300"></div>
-            <div class="absolute left-0.5 top-0.5 bg-white w-5 h-5 rounded-full transition-all duration-300 peer-checked:translate-x-5"></div>
-          </label>
-        </div>
+    <div class="w-full flex flex-col">
+      <div class="about-system-header">
+        <h1 class="p-4 text-center text-2xl font-bold  max-sm:p-2 max-lg:text-sm">Настройка синхронизации времени</h1>
+        <hr class="mb-16 max-lg:mb-12 ">
       </div>
-
-      <!-- Дежурный сервер -->
-      <div class="flex items-center border-b border-black border-opacity-20 py-4 max-lg:py-2">
-  <p class="text-2xl w-full sm:w-1/2 md:text-xl sm:text-lg max-lg:text-xs">Дежурный сервер</p>
-  <div class="w-full sm:w-1/2 flex justify-end sm:justify-start">
-    <label class="relative inline-flex items-center cursor-pointer">
-      <input type="checkbox" class="sr-only peer">
-      <div class="w-11 h-6 bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-500 rounded-full peer peer-checked:bg-blue-600 transition-colors duration-300"></div>
-      <div class="absolute left-0.5 top-0.5 bg-white w-5 h-5 rounded-full transition-all duration-300 peer-checked:translate-x-5"></div>
-    </label>
-  </div>
-</div>
-
-
-      <!-- Вручную (подправленный блок) -->
-      <div class="flex flex-col sm:flex-row items-center border-b border-black border-opacity-20 py-4 max-lg:py-2 max-sm:flex-row">
-        <p class="text-2xl w-full sm:w-1/2 md:text-xl sm:text-lg max-lg:text-xs">Вручную</p>
-        <div class="w-full sm:w-1/2 flex items-center mt-2 sm:mt-0 gap-4 max-sm:flex-row-reverse">
-          <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" class="sr-only peer">
-            <div class="w-11 h-6 bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-500 rounded-full peer peer-checked:bg-blue-600 transition-colors duration-300"></div>
-            <div class="absolute left-0.5 top-0.5 bg-white w-5 h-5 rounded-full transition-all duration-300 peer-checked:translate-x-5"></div>
-          </label>
-          <input
-            id="date"
-            type="date"
-            v-model="selectedDate"
-            class="px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base"
-          />
+      <div class="about-system-title  mx-auto flex flex-col  ">
+        <hr class="mb-2 hr_one">
+        <div class="flex border-b border-black border-opacity-20 py-4 ">
+            <p class="text-2xl w-1/2 max-lg:text-lg max-lg:px-2 max-sm:text-xs">Синхронизация</p>
+            <label class=" w-1/2 relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-500 rounded-full peer peer-checked:bg-blue-600 transition-colors duration-300"></div>
+                <div class="absolute left-0.4 top-0.4 bg-white w-6 h-6 rounded-full transition-all duration-300 peer-checked:translate-x-full"></div>
+            </label>
         </div>
-      </div>
-
-      <!-- Часовой пояс -->
-      <div class="flex flex-col sm:flex-row items-center border-b border-black border-opacity-20 py-4 max-lg:py-1">
-  <p class="text-2xl w-full sm:w-1/2 md:text-xl sm:text-lg max-lg:text-xs">Часовой пояс</p>
-
-  <div class="w-full sm:w-1/2 mt-2 sm:mt-0 px-2">
-    <div class="relative w-full overflow-hidden">
-    
-      <select
-  class="form-select w-11/12 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm sm:text-base truncate"
-  id="timezone"
->
-                                          <option  value="0">(UTC) Эдинбург, Лондон</option>
+       <!--  Дежурный сервер -->
+        <div class="flex border-b border-black border-opacity-20 py-4 ">
+            <p class="text-2xl w-1/2 max-lg:text-lg max-lg:px-2 max-sm:text-xs">Дежурный сервер</p>
+            <label class=" w-1/2 relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-500 rounded-full peer peer-checked:bg-blue-600 transition-colors duration-300"></div>
+                <div class="absolute left-0.4 top-0.4 bg-white w-6 h-6 rounded-full transition-all duration-300 peer-checked:translate-x-full"></div>
+            </label>
+        </div>
+        <!-- Вручную -->
+        <div class="flex border-b border-black border-opacity-20 py-4 items-center">
+            <p class="text-2xl w-1/2 max-lg:text-lg max-lg:px-2 max-sm:text-xs">Вручную</p>
+            <div class="flex flex-col  gap-2 ">
+                <label class=" w-1/2 relative inline-flex items-center cursor-pointer">
+                <input type="checkbox" class="sr-only peer ">
+                <div class="w-11 h-6 bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-500 rounded-full peer peer-checked:bg-blue-600 transition-colors duration-300"></div>
+                <div class="absolute left-0.4 top-0.4 bg-white w-6 h-6 rounded-full transition-all duration-300 peer-checked:translate-x-full"></div>
+            </label>
+            <input id="date" type="date" v-model="selectedDate" class="px-3 py-2 border
+             border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-base"/>
+            </div>
+        </div>
+        <!-- Часовой пояс -->
+        <div class="flex border-b border-black border-opacity-20 py-4 ">
+            <p class="text-2xl w-1/2 max-lg:text-lg max-lg:px-2">Часовой пояс</p>
+            
+                                        <select class="form-select" id="timezone" aria-label="Пример выбора по умолчанию" >
+                                            <option  value="0">(UTC) Эдинбург, Лондон</option>
                                             <option value="0">(UTC-01:00) Азорские острова</option>
                                             <option value="0">(UTC) Монровия, Рейкьявик</option>
                                             <option value="1">(UTC+01:00) Эдинбург, Лондон</option>
@@ -153,82 +131,78 @@
                                             <option value="-10">(UTC-10:00) Гавайи</option>
                                             <option value="-11">(UTC-11:00) Всемирное координированное время-11</option>
                                             <option value="-12">(UTC-12:00) Международная линия перемены дат Запад</option>
-      </select>
-    </div>
-  </div>
-</div>
-
-
-      <!-- Первичный NTP сервер -->
-      <div class="flex flex-col sm:flex-row items-center border-b border-black border-opacity-20 py-4 max-lg:py-1">
-        <p class="text-2xl w-full sm:w-1/2 md:text-xl sm:text-lg max-lg:text-xs">Первичный NTP сервер</p>
-        <div class="w-full sm:w-1/2 mt-2 sm:mt-0">
-          <div class="flex rounded-md shadow-sm w-11/12">
-            <input
-              type="text"
-              id="firstNTPinput"
-              placeholder="IP адрес или доменное имя, порт"
-              class="flex-1 block w-full rounded-l-md border border-gray-300 px-3 py-2 focus:outline-none text-base"/>
-            <button class="bg-[#edeff0] px-3 rounded-r-md">
-              <img class="hover:scale-110 transition-all duration-300" src="/img/logout.svg" alt="" width="24px">
-            </button>
-          </div>
+                                        </select>
+                                
         </div>
-      </div>
-
-      <!-- Вторичный NTP сервер -->
-      <div class="flex flex-col sm:flex-row items-center border-b border-black border-opacity-20 py-4 max-lg:py-1">
-        <p class="text-2xl w-full sm:w-1/2 md:text-xl sm:text-lg max-lg:text-xs">Вторичный NTP сервер</p>
-        <div class="w-full sm:w-1/2 mt-2 sm:mt-0">
-          <div class="flex rounded-md shadow-sm w-11/12">
-            <input
-              type="text"
-              id="secondNTPinput"
-              placeholder="IP адрес или доменное имя, порт"
-              class="flex-1 block w-full rounded-l-md border border-gray-300 px-3 py-2 focus:outline-none text-base"/>
-            <button class="bg-[#edeff0] px-3 rounded-r-md">
-              <img class="hover:scale-110 transition-all duration-300" src="/img/logout.svg" alt="" width="24px">
-            </button>
-          </div>
+     <!--    Первичный NTP сервер -->
+        <div class="flex border-b border-black border-opacity-20 py-4 ">
+            <p class="text-2xl w-1/2 max-lg:text-lg max-lg:px-2">Первичный NTP сервер</p>
+            <div class="w-1/2 flex items-center border-b border-black border-opacity-20 pe-0">
+              <div class="w-full max-w-xl pe-2">
+                <div class="flex rounded-md shadow-sm">
+                  <input
+                  type="text"
+                  id="firstNTPinput"
+                  placeholder="IP адрес или доменное имя, порт"
+                  aria-label="IP address"
+                  class="flex-1 block w-full rounded-l-md border border-gray-300 px-4 py-2 focus:outline-none "/>
+                  <button class="bg-[#edeff0]"><img class="hover:scale-110 transition-all duration-300" src="/img/logout.svg" alt="" width="30px"></button>
+                </div>
+              </div>
+            </div>
         </div>
+           <!--    Вторичный NTP сервер -->
+           <div class="flex border-b border-black border-opacity-20 py-4 ">
+            <p class="text-2xl w-1/2 max-lg:text-lg max-lg:px-2">Вторичный NTP сервер</p>
+            <div class="w-1/2 flex items-center border-b border-black border-opacity-20 pe-0">
+              <div class="w-full max-w-xl pe-2">
+                <div class="flex rounded-md shadow-sm">
+                  <input
+                  type="text"
+                  id="firstNTPinput"
+                  placeholder="IP адрес или доменное имя, порт"
+                  aria-label="IP address"
+                  class="flex-1 block w-full rounded-l-md border border-gray-300 px-4 py-2 focus:outline-none "/>
+                  <button class="bg-[#edeff0]"><img class="hover:scale-110 transition-all duration-300" src="/img/logout.svg" alt="" width="30px"></button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="flex text-center justify-center py-10 gap-12 border-b border-black border-opacity-20" >
+                <button class="text-blue-400 text-2xl hover:text-blue-700 transition-all duration-300 max-lg:text-sm">Сохранить</button>
+                <button class="text-red-400 text-2xl hover:text-red-700 transition-all duration-300 max-lg:text-sm">Отменить</button>
+           </div>
+
+
+
+
       </div>
 
-      <!-- Кнопки -->
-      <div class="flex sm:flex-row text-center justify-center py-10 gap-6 sm:gap-12 border-b border-black border-opacity-20 max-lg:py-3">
-        <button class="text-blue-400 text-2xl md:text-xl sm:text-lg hover:text-blue-700 transition-all duration-300 max-lg:text-sm">Сохранить</button>
-        <button class="text-red-400 text-2xl md:text-xl sm:text-lg hover:text-red-700 transition-all duration-300 max-lg:text-sm">Отменить</button>
-      </div>
+
+     
+
     </div>
-  </div>
 </template>
+  
+  
+  
+  <style scoped>
 
-
-<style scoped>
-
-
-.about-system-title {
+ .about-system-title{
   width: 95%;
-}
-
-.hr_one {
-  border: 1px solid black;
-  opacity: 50%;
-  width: 105%;
-  margin-left: -2.7%; 
-}
-
-hr {
-  border: 1px solid #2A588C;
-}
-
-@media (max-width: 400px) {
-  .form-select, input[type="date"], input[type="text"] {
-    font-size: 0.875rem;
-    padding: 0.5rem;
+ }
+ .hr_one{
+    
+   
+    border: 1px solid black;
+    opacity: 50%;
+    
+ }
+  hr{
+    border: 1px solid #2A588C;
+    
+   
+   
   }
-
-  button {
-    font-size: 1rem;
-  }
-}
-</style>
+  </style>
+  

@@ -2,6 +2,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 
+
 const nav = ref([
   { title: 'Сведения о системе', img:"./img/icon1.svg", link:"/about-system", },
   { title: 'Настройка стека TCP/IP', img:"./img/tcpip.svg", link:"/tcpip", },
@@ -18,12 +19,12 @@ const nav = ref([
 </script>
 
 <template>
-  <div class="relative w-full h-1/4 sm:hidden">
+  <div class="relative w-full h-1/4 sm:hidden ">
         <img src="/img/fon2.png" alt="fon_one" class="w-full h-auto object-cover">
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <img src="/img/strazh-main2.png" alt="Strazh-main" class="h-auto w-80">
         </div>
-      </div>
+  </div>
   <div class="h-full w-full flex flex-row ">
     <div class="w-1/5 h-full max-xl:w-2/6 max-lg:w-3/6 max-sm:w-20">
       <div class="relative w-full h-1/4 max-sm:hidden ">
@@ -36,7 +37,14 @@ const nav = ref([
         <li
           v-for="item in nav"
           :key="item.title"
-          class="hover:bg-[#DFE6EE] transition-all duration-300 hover:translate-x-2"
+          :class="{
+            'bg-[#D2E0F0]': $route.path === item.link,
+            'hover:bg-[#DFE6EE]': $route.path !== item.link,
+            'transition-all': true,
+            'duration-300': true,
+            'hover:translate-y-[-5px]': true,
+            'hover:shadow-xl': true
+          }"
         >
           <router-link
             :to="item.link"
@@ -51,6 +59,7 @@ const nav = ref([
     <div class="w-full h-full bg-white"><router-view /></div>
   </div>
 </template>
+
 
 <style scoped>
 

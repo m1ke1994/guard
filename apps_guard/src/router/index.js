@@ -6,6 +6,11 @@ import Timesync from '../views/Timesync.vue'
 
 const routes = [
   {
+    path: '/',
+    redirect: '/about-system'
+  },
+  
+  {
     path: '/about-system',
     name: 'AboutSystem',
     component: AboutSystem
